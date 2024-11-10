@@ -1,4 +1,4 @@
-import { Vector2d } from "./Utils";
+import { Vector2d } from "./Utils.js";
 
 export interface CellHandle {
     // The rendering context is passed with zeroed coordinates, so it can use relative coordinates.
@@ -68,10 +68,10 @@ export class CellTable {
     constructor(
         public ctx: CanvasRenderingContext2D,
         public num_rows: number,
-        private cell_entries: Array<{row: RowId, col: ColId, handle: CellHandle}>,
         public num_cols: number,
-        public empty_row_height: number,
-        public empty_col_width: number
+        private cell_entries: Array<{row: RowId, col: ColId, handle: CellHandle}>,
+        public empty_row_height: number = 2,
+        public empty_col_width: number = 2,
     ) {}
 
     private calculate_dicts(): CellTableDicts {

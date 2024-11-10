@@ -1,5 +1,5 @@
-import { Vector2d } from "./Utils";
-import { CellHandle } from "./CellTable";
+import { Vector2d } from "./Utils.js";
+import { CellHandle } from "./CellTable.js";
 
 export class CirclesTable {
     constructor(

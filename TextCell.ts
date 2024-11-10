@@ -1,5 +1,5 @@
-import { Vector2d } from "./Utils";
-import { CellHandle } from "./CellTable"
+import { Vector2d } from "./Utils.js";
+import { CellHandle } from "./CellTable.js"
 
 export class TextCell implements CellHandle {
     constructor(
@@ -7,8 +7,8 @@ export class TextCell implements CellHandle {
         public text: string
     ) {}
     
-    render(ctx: CanvasRenderingContext2D): void {
-        
+    render(ctx_do_remove_this: CanvasRenderingContext2D): void {
+        this.ctx.strokeText(this.text, 0, 0);
     }
     
     rmb_clbk(offset: Vector2d): void {
